@@ -74,38 +74,48 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="DalamudPackager" Version="2.1.5" />
+		<PackageReference Include="DalamudPackager" Version="2.1.5"/>
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="Tippy\Resource\bubble.png" />
-		<None Remove="Tippy\Resource\map.png" />
-		<None Remove="Tippy\Resource\MS Sans Serif.ttf" />
-		<None Remove="Tippy\Resource\tada.wav" />
-		<None Remove="Tippy\Resource\welcome.png" />
+		<None Remove="Tippy\Resource\bubble.png"/>
+		<None Remove="Tippy\Resource\map.png"/>
+		<None Remove="Tippy\Resource\MS Sans Serif.ttf"/>
+		<None Remove="Tippy\Resource\tada.wav"/>
+		<None Remove="Tippy\Resource\welcome.png"/>
 	</ItemGroup>
 	<ItemGroup>
-	  <EmbeddedResource Include="Resource\bubble.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resource\chord.wav">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resource\map.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resource\MS Sans Serif.ttf">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resource\tada.wav">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
-	  <EmbeddedResource Include="Resource\welcome.png">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </EmbeddedResource>
+		<EmbeddedResource Include="Resource\bubble.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resource\chord.wav">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resource\map.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resource\MS Sans Serif.ttf">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resource\tada.wav">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Resource\welcome.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
 	</ItemGroup>
 	<Target Name="CopyToDevPlugins" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
-		<Exec Command="if not exist $(AppData)\XIVLauncher\devPlugins\$(TargetName) (mkdir $(AppData)\XIVLauncher\devPlugins\$(TargetName))" />
-		<Exec Command="copy $(TargetDir)$(TargetFileName) $(AppData)\XIVLauncher\devPlugins\$(TargetName)\$(TargetFileName)" />
-		<Exec Command="copy $(TargetDir)*.pdb $(AppData)\XIVLauncher\devPlugins\$(TargetName)" />
+		<Exec Command="if not exist $(AppData)\XIVLauncher\devPlugins\$(TargetName) (mkdir $(AppData)\XIVLauncher\devPlugins\$(TargetName))"/>
+		<Exec Command="copy $(TargetDir)$(TargetFileName) $(AppData)\XIVLauncher\devPlugins\$(TargetName)\$(TargetFileName)"/>
+		<Exec Command="copy $(TargetDir)*.pdb $(AppData)\XIVLauncher\devPlugins\$(TargetName)"/>
+	</Target>
+	<Target Name="Cleanup" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+		<ItemGroup>
+			<DeleteFiles Include="$(TargetDir)*.xml;$(TargetDir)*.json;$(TargetDir)*.pdb"/>
+		</ItemGroup>
+		<Delete Files="@(DeleteFiles)"/>
+	</Target>
+	<Target Name="CopyImages" AfterTargets="Package" Condition=" '$(Configuration)' == 'Release' ">
+		<MakeDir Directories="$(TargetDir)$(AssemblyName)\images"/>
+		<Exec Command="copy $(ProjectDir)..\..\assets\*.png $(TargetDir)$(AssemblyName)\images\*.png"/>
 	</Target>
 </Project>

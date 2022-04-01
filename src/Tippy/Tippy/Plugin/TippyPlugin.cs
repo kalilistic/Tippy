@@ -87,6 +87,7 @@ namespace Tippy
 
         public void Dispose()
         {
+            PluginInterface.UiBuilder.BuildFonts -= this.OnBuildFonts;
             PluginInterface.UiBuilder.Draw -= this.Draw;
             this.welcomeTex.Dispose();
             this.tippySpriteSheet.Dispose();

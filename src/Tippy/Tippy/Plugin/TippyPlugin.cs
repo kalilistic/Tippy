@@ -62,6 +62,7 @@ namespace Tippy
 
             this.tippyFrameTimer.Start();
             PluginInterface.UiBuilder.BuildFonts += this.OnBuildFonts;
+            PluginInterface.UiBuilder.RebuildFonts();
             PluginInterface.UiBuilder.Draw += this.Draw;
             
             this.isTippyDrawing = true;

@@ -24,6 +24,7 @@ namespace Tippy
             "Much like doing a \"brake check\" on the\nroad, you can do a \"heal check\"\nin-game! \n\nJust pop Superbolide at a random time,\npreferably about five seconds before \nraidwide damage.",
             "This text is powered by duck energy!",
             "Goat is my original developer, so you can blame him for this.",
+            "Twee is defined as excessively or \naffectedly quaint, pretty, \nor sentimental.",
         };
 
         public static readonly string Intro =

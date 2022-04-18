@@ -1,0 +1,398 @@
+{
+    "INT-000001": {
+        "message": "Hi, I'm Tippy! I'm your new friend and assistant. I will help you get better at FFXIV!",
+        "description": "Messages..cctor"
+    },
+    "INT-000002": {
+        "message": "Do you know that I now have configuration options?",
+        "description": "Messages..cctor"
+    },
+    "INT-000003": {
+        "message": "Ready for a new tip? You can right click on me to request another one!",
+        "description": "Messages..cctor"
+    },
+    "INT-000004": {
+        "message": "Bored of a tip? You can right click on me to hide it forever!",
+        "description": "Messages..cctor"
+    },
+    "INT-000005": {
+        "message": "Other plugins can now send me messages! Ask your favorite plugin developer to integrate with Tippy!",
+        "description": "Messages..cctor"
+    },
+    "GEN-000001": {
+        "message": "Vuln stacks really don't affect damage you receive by that much, so ignore any healer that complains about you not doing mechanics correctly.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000002": {
+        "message": "Wiping the party is an excellent method to clear away bad status effects, including death.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000003": {
+        "message": "Players in your party do not pay your sub. Play the game however you like and report harassment.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000004": {
+        "message": "In a big pull, always use the ability with the highest potency number on your bar.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000005": {
+        "message": "Make sure to avoid the stack marker so that your healers have less people to heal during raids!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000006": {
+        "message": "Put macro'd dialogue on all of your attacks as a tank to also gain enmity from your party members.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000007": {
+        "message": "Make sure to save your LB until the boss is at 1 pct. This will lead to the greatest effect.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000008": {
+        "message": "If you want to leave your party quickly and blame disconnect, just change your PC time!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000009": {
+        "message": "I will never leave you!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000010": {
+        "message": "You cannot hide any longer.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000011": {
+        "message": "Powered by XIVLauncher!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000012": {
+        "message": "When playing Hunter, specialize your pet into taunting to help out your tank!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000013": {
+        "message": "It doesn't matter if you play BRD or MCH, it comes down to personal choice!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000014": {
+        "message": "This text is powered by duck energy!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000015": {
+        "message": "Goat is my original developer, so you can blame him for this.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000016": {
+        "message": "Did you know you can get through queue faster by hitting cancel?",
+        "description": "Tips..cctor"
+    },
+    "GEN-000017": {
+        "message": "You do more damage if you're wearing casual attire.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000018": {
+        "message": "Don't worry about damage downs, it just shows you are focusing on the boss.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000019": {
+        "message": "I've seen you ERPing... Extreme Raid Progression can be fun.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000020": {
+        "message": "It seems like you are parsing grey. You should check out the official job guide to play better.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000021": {
+        "message": "Why doesn't Cid ever use steel? Because iron works.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000022": {
+        "message": "Why do FFXIV players always have broken down cars? They don't know any mechanics.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000023": {
+        "message": "What do moogles use when they go shopping? Kupons.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000024": {
+        "message": "What's Twintania's favorite party game? Twister.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000025": {
+        "message": "Why did the Sahagin cross the waves? To get to the other tide.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000026": {
+        "message": "What do you call a poor Lala? A little short.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000027": {
+        "message": "What do people do when they are cold? They Shiva.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000028": {
+        "message": "Don't like people? Try the visibility plugin today!",
+        "description": "Tips..cctor"
+    },
+    "TANK-000001": {
+        "message": "Always save your cooldowns for boss fights.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000002": {
+        "message": "Piety matters as much as tenacity.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000003": {
+        "message": "Meld piety to maximize your DPS.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000004": {
+        "message": "Let your party know... you pull you tank!",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000001": {
+        "message": "Remember, Rescue works over gaps in the floor. Use it to save fellow players.",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000002": {
+        "message": "Remember, you're a healer not a dps. Doing damage is optional.",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000003": {
+        "message": "What type of shoes do healers wear? Heals.",
+        "description": "Tips..cctor"
+    },
+    "DPS-000001": {
+        "message": "If you're feeling lazy, just let your party pick up the slack. They won't mind.",
+        "description": "Tips..cctor"
+    },
+    "DOHL-000001": {
+        "message": "Stop crafting and gathering. Just buy my stuff off the market board instead.",
+        "description": "Tips..cctor"
+    },
+    "GLA-000001": {
+        "message": "You can stay as a gladiator forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "PGL-000001": {
+        "message": "You can stay as a pugilist forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "MRD-000001": {
+        "message": "You can stay as a marauder forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "LNC-000001": {
+        "message": "You can stay as a lancer forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "ARC-000001": {
+        "message": "You can stay as a archer forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "CNJ-000001": {
+        "message": "You can stay as a conjurer forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "THM-000001": {
+        "message": "You can stay as a thaumaturge forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "PLD-000001": {
+        "message": "Always use clemency whenever you have the mana.",
+        "description": "Tips..cctor"
+    },
+    "PLD-000002": {
+        "message": "Why did the Paladin get kicked from the party? He wouldn't stop flashing everyone.",
+        "description": "Tips..cctor"
+    },
+    "PLD-000003": {
+        "message": "Why do Paladins make bad secret agents? Because they always blow their Cover when things get dicey. ",
+        "description": "Tips..cctor"
+    },
+    "MNK-000001": {
+        "message": "Always use Six-Sided Star on CD. It's your highest potency ability.",
+        "description": "Tips..cctor"
+    },
+    "MNK-000002": {
+        "message": "Use Fists of Fire Earth to mitigate big damage during fights. Your healers will thank you.",
+        "description": "Tips..cctor"
+    },
+    "MNK-000003": {
+        "message": "Why are Monk jokes so funny? They have a strong punchline.",
+        "description": "Tips..cctor"
+    },
+    "WAR-000001": {
+        "message": "Infuriate before Inner Release to guarantee a Direct Hit Critical Inner Chaos.",
+        "description": "Tips..cctor"
+    },
+    "WAR-000002": {
+        "message": "Apply Nascent Flash to yourself to gain Nascent Glint for 10% damage  mitigation.",
+        "description": "Tips..cctor"
+    },
+    "DRG-000001": {
+        "message": "Always make sure to use Mirage Dive directly after Jump so you don't forget to use it.",
+        "description": "Tips..cctor"
+    },
+    "BRD-000001": {
+        "message": "Use macros so you can add song lyrics to your music!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000001": {
+        "message": "Always use Benediction on cooldown to maximize healing power!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000002": {
+        "message": "Fluid Aura is a DPS gain!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000003": {
+        "message": "Always use Cure immediately so you can get Freecure procs!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000004": {
+        "message": "Cure 1 is more mana-efficient than Cure 2, so use that instead of Glare!",
+        "description": "Tips..cctor"
+    },
+    "BLM-000001": {
+        "message": "Tired of casting fire so much? Try out using only ice spells for a change of pace!",
+        "description": "Tips..cctor"
+    },
+    "ACN-000001": {
+        "message": "You can stay as a arcanist forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "SMN-000001": {
+        "message": "Titan-Egi can maximize your DPS by shielding you from interrupting damage!",
+        "description": "Tips..cctor"
+    },
+    "SMN-000002": {
+        "message": "Why do people dislike summoners? They ruin everything.",
+        "description": "Tips..cctor"
+    },
+    "SCH-000001": {
+        "message": "Attach Eos to the BRD so they receive healing when at max range.",
+        "description": "Tips..cctor"
+    },
+    "SCH-000002": {
+        "message": "Swiftcast Succor before raidwide for heals and shield mitigation, allowing you to weave in an oGCD!",
+        "description": "Tips..cctor"
+    },
+    "SCH-000003": {
+        "message": "Why do Scholars make such good sales people? Because there's a Succor born every minute.",
+        "description": "Tips..cctor"
+    },
+    "ROG-000001": {
+        "message": "You can stay as a rogue forever, just don't equip your job stone!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000001": {
+        "message": "A ninja always appears raiton time!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000002": {
+        "message": "Tiger Palm is your most important GCD for Brew and Chi generation. Make sure to cast it in favor of other energy-spending abilities!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000003": {
+        "message": "Why are ninjas never late? Because they arrive Raiton time.",
+        "description": "Tips..cctor"
+    },
+    "AST-000001": {
+        "message": "What is an Astrologian's favorite sweater? A cardigan.",
+        "description": "Tips..cctor"
+    },
+    "SAM-000001": {
+        "message": "Increase Midare damage by shouting \"BANKAI\" in chat. This can be accomplished through the use of macros.",
+        "description": "Tips..cctor"
+    },
+    "SAM-000002": {
+        "message": "The best SAM rotation is freestyle. Just do what works for you.",
+        "description": "Tips..cctor"
+    },
+    "BLU-000001": {
+        "message": "Did you know that Blue Mage is throwaway content?",
+        "description": "Tips..cctor"
+    },
+    "GNB-000001": {
+        "message": "Much like doing a \"brake check\" on the road, you can do a \"heal check\" in-game! Just pop Superbolide!",
+        "description": "Tips..cctor"
+    },
+    "DNC-000001": {
+        "message": "Only give Dance Partner to people after they used a dance emote.",
+        "description": "Tips..cctor"
+    },
+    "SGE-000001": {
+        "message": "Remember to always cast Kardia on yourself, especially in dungeons.",
+        "description": "Tips..cctor"
+    },
+    "###Tippy_Config_Window": {
+        "message": "Tippy Config",
+        "description": "ConfigWindow.Draw"
+    },
+    "###Tippy_General_Tab": {
+        "message": "General",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Timers_Tab": {
+        "message": "Timers",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Blocked_Tab": {
+        "message": "Blocked",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_IsEnabled_Checkbox": {
+        "message": "Enable Tippy",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_EnableSounds_Checkbox": {
+        "message": "Enable Sounds",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowIntro_Checkbox": {
+        "message": "Show Intro",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_IsLocked_Checkbox": {
+        "message": "Is Locked",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_UseClassicFont_Checkbox": {
+        "message": "Use Classic Font",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowDebugWindow_Checkbox": {
+        "message": "Show Debug Window",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_MessageTimeout_Slider": {
+        "message": "Message Timeout",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipTimeout_Slider": {
+        "message": "Tip Timeout",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipCooldown_Slider": {
+        "message": "Tip Cooldown",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_BlockedTips_Text": {
+        "message": "Click on a tip to unblock.",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_NoBlockedTips_Text": {
+        "message": "You haven't blocked any tips!",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_ShowNewTip_MenuItem": {
+        "message": "Show new tip",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_BlockTip_MenuItem": {
+        "message": "Don't show tip again",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_OpenSettings_MenuItem": {
+        "message": "Open settings",
+        "description": "TippyUI.DrawTippyMenu"
+    }
+}

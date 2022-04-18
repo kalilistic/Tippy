@@ -6,10 +6,9 @@ namespace Tippy
     /// </summary>
     public enum TippyState
     {
-        BeforeIntro,
-        Intro,
-        Tips,
-        Timeout,
-        Parse,
+        NotStarted,
+        GivingTip,
+        GivingMessage,
+        Idle,
     }
 }

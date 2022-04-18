@@ -4,7 +4,7 @@
 		<Authors>kalilistic</Authors>
 		<TargetFramework>net5.0-windows</TargetFramework>
 		<Platforms>x64</Platforms>
-		<LangVersion>9</LangVersion>
+		<LangVersion>10</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Nullable>enable</Nullable>
 		<Deterministic>true</Deterministic>
@@ -35,6 +35,12 @@
 		<ErrorReport>prompt</ErrorReport>
 		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="stylecop.json" />
+		<AdditionalFiles Include="..\stylecop.json">
+			<Link>stylecop.json</Link>
+		</AdditionalFiles>
+	</ItemGroup>
 	<ItemGroup>
 		<Reference Include="CheapLoc">
 			<HintPath>$(AppData)\XIVLauncher\addon\Hooks\dev\CheapLoc.dll</HintPath>
@@ -74,48 +80,135 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="DalamudPackager" Version="2.1.5"/>
+		<PackageReference Include="ILRepack" Version="2.0.18" />
+		<PackageReference Include="DalamudPackager" Version="2.1.7" />
+		<PackageReference Include="Dalamud.DrunkenToad" Version="1.1.8" />
+		<PackageReference Include="NAudio" Version="2.0.1" />
+		<PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.406">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="Tippy\Resource\bubble.png"/>
-		<None Remove="Tippy\Resource\map.png"/>
-		<None Remove="Tippy\Resource\MS Sans Serif.ttf"/>
-		<None Remove="Tippy\Resource\tada.wav"/>
-		<None Remove="Tippy\Resource\welcome.png"/>
+	  <None Remove="Resource\agent.json" />
+	  <EmbeddedResource Include="Resource\agent.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\bubble.png" />
+	  <EmbeddedResource Include="Resource\bubble.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\chord.wav" />
+	  <None Remove="Resource\map.png" />
+	  <EmbeddedResource Include="Resource\map.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\MS Sans Serif.ttf" />
+	  <None Remove="Resource\sound_1.mp3" />
+	  <EmbeddedResource Include="Resource\sound_1.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_10.mp3" />
+	  <EmbeddedResource Include="Resource\sound_10.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_11.mp3" />
+	  <EmbeddedResource Include="Resource\sound_11.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_12.mp3" />
+	  <EmbeddedResource Include="Resource\sound_12.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_13.mp3" />
+	  <EmbeddedResource Include="Resource\sound_13.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_14.mp3" />
+	  <EmbeddedResource Include="Resource\sound_14.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_15.mp3" />
+	  <EmbeddedResource Include="Resource\sound_15.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_2.mp3" />
+	  <EmbeddedResource Include="Resource\sound_2.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_3.mp3" />
+	  <EmbeddedResource Include="Resource\sound_3.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_4.mp3" />
+	  <EmbeddedResource Include="Resource\sound_4.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_5.mp3" />
+	  <EmbeddedResource Include="Resource\sound_5.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_6.mp3" />
+	  <EmbeddedResource Include="Resource\sound_6.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_7.mp3" />
+	  <EmbeddedResource Include="Resource\sound_7.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_8.mp3" />
+	  <EmbeddedResource Include="Resource\sound_8.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\sound_9.mp3" />
+	  <EmbeddedResource Include="Resource\sound_9.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\tada.wav" />
+	  <None Remove="Resource\micross.ttf" />
+	  <EmbeddedResource Include="Resource\micross.ttf">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Resource\mssansserif.ttf" />
+	  <EmbeddedResource Include="Resource\mssansserif.ttf">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <None Remove="Tippy\Resource\translation\de.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\de.json" />
+	  <None Remove="Tippy\Resource\translation\es.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\es.json" />
+	  <None Remove="Tippy\Resource\translation\fr.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\fr.json" />
+	  <None Remove="Tippy\Resource\translation\it.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\it.json" />
+	  <None Remove="Tippy\Resource\translation\ja.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\ja.json" />
+	  <None Remove="Tippy\Resource\translation\no.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\no.json" />
+	  <None Remove="Tippy\Resource\translation\pt.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\pt.json" />
+	  <None Remove="Tippy\Resource\translation\ru.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\ru.json" />
+	  <None Remove="Tippy\Resource\translation\zh.json" />
+	  <EmbeddedResource Include="Tippy\Resource\translation\zh.json" />
 	</ItemGroup>
-	<ItemGroup>
-		<EmbeddedResource Include="Resource\bubble.png">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Resource\chord.wav">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Resource\map.png">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Resource\MS Sans Serif.ttf">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Resource\tada.wav">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-		<EmbeddedResource Include="Resource\welcome.png">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-	</ItemGroup>
-	<Target Name="CopyToDevPlugins" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
-		<Exec Command="if not exist $(AppData)\XIVLauncher\devPlugins\$(TargetName) (mkdir $(AppData)\XIVLauncher\devPlugins\$(TargetName))"/>
-		<Exec Command="copy $(TargetDir)$(TargetFileName) $(AppData)\XIVLauncher\devPlugins\$(TargetName)\$(TargetFileName)"/>
-		<Exec Command="copy $(TargetDir)*.pdb $(AppData)\XIVLauncher\devPlugins\$(TargetName)"/>
-	</Target>
-	<Target Name="Cleanup" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+		<Target Name="MergeDeps" AfterTargets="Build">
 		<ItemGroup>
-			<DeleteFiles Include="$(TargetDir)*.xml;$(TargetDir)*.json;$(TargetDir)*.pdb"/>
+			<InputAssemblies Include="$(TargetPath)" />
+			<InputAssemblies Include="$(TargetDir)*.dll" Exclude="$(TargetPath)" />
+			<DeleteFiles Include="$(TargetDir)*.dll" Exclude="$(TargetDir)$(TargetFileName)" />
 		</ItemGroup>
-		<Delete Files="@(DeleteFiles)"/>
+		<Exec Command="$(PkgILRepack)\tools\ILRepack.exe /union /lib:$(DalamudLibPath) /out:$(TargetDir)$(TargetFileName) @(InputAssemblies, ' ')" />
+		<Delete Files="@(DeleteFiles)" />
+	</Target>
+	<Target Name="Cleanup" AfterTargets="MergeDeps" Condition=" '$(Configuration)' == 'Release' ">
+		<ItemGroup>
+			<DeleteFiles Include="$(TargetDir)*.xml;$(TargetDir)*.json;$(TargetDir)*.pdb" />
+		</ItemGroup>
+		<Delete Files="@(DeleteFiles)" />
 	</Target>
 	<Target Name="CopyImages" AfterTargets="Package" Condition=" '$(Configuration)' == 'Release' ">
-		<MakeDir Directories="$(TargetDir)$(AssemblyName)\images"/>
-		<Exec Command="copy $(ProjectDir)..\..\assets\*.png $(TargetDir)$(AssemblyName)\images\*.png"/>
+		<MakeDir Directories="$(TargetDir)$(AssemblyName)\images" />
+		<Exec Command="copy $(ProjectDir)..\..\assets\*.png $(TargetDir)$(AssemblyName)\images\*.png" />
 	</Target>
 </Project>

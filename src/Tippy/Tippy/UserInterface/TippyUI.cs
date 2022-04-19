@@ -157,6 +157,7 @@ public class TippyUI
         ImGui.SetNextWindowSize(this.windowSize, ImGuiCond.Always);
         ImGui.SetNextWindowPos(ImGui.GetIO().DisplaySize - this.windowSize, ImGuiCond.FirstUseEver);
         ImGui.PushStyleColor(ImGuiCol.WindowBg, Vector4.Zero);
+        ImGui.PushStyleColor(ImGuiCol.Border, Vector4.Zero);
         ImGui.PushStyleColor(ImGuiCol.PopupBg, ImGuiColors.DalamudViolet);
         ImGui.Begin("###TippyWindow", GetWindowFlags());
         ImGui.PushFont(TippyPlugin.Config.UseClassicFont ? MSSansSerifFont : MicrosoftSansSerifFont);
@@ -166,7 +167,7 @@ public class TippyUI
     private void EndContainer()
     {
         ImGui.End();
-        ImGui.PopStyleColor(3);
+        ImGui.PopStyleColor(4);
         ImGui.PopFont();
     }
 

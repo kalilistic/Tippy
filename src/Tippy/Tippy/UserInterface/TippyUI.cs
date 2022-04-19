@@ -15,11 +15,15 @@ namespace Tippy;
 /// </summary>
 public class TippyUI
 {
+    /// <summary>
+    /// Config window.
+    /// </summary>
+    public readonly ConfigWindow ConfigWindow;
+
     private readonly TippyPlugin plugin;
     private readonly TextureWrap tippyTexture;
     private readonly TextureWrap bubbleTexture;
     private readonly string[] debugAnimationNames;
-    private readonly ConfigWindow configWindow;
 
     private Vector2 windowSize;
     private Vector2 contentPos;
@@ -38,7 +42,7 @@ public class TippyUI
     public TippyUI(TippyPlugin plugin)
     {
         this.plugin = plugin;
-        this.configWindow = new ConfigWindow();
+        this.ConfigWindow = new ConfigWindow();
         this.debugAnimationNames = Enum.GetNames(typeof(AnimationType));
         var spriteTexturePath = plugin.GetResourcePath("map.png");
         this.tippyTexture = TippyPlugin.PluginInterface.UiBuilder.LoadImage(spriteTexturePath);
@@ -106,7 +110,7 @@ public class TippyUI
     {
         try
         {
-            this.configWindow.Draw();
+            this.ConfigWindow.Draw();
             if (!TippyPlugin.Config.IsEnabled) return;
             this.CalcUI();
             this.StartContainer();
@@ -224,7 +228,7 @@ public class TippyUI
                 }
             }
 
-            if (!this.configWindow.IsVisible)
+            if (!this.ConfigWindow.IsVisible)
             {
                 if (ImGui.MenuItem(Loc.Localize("###Tippy_OpenSettings_MenuItem", "Open settings")))
                 {
@@ -266,6 +270,6 @@ public class TippyUI
 
     private void OnOpenConfigUi()
     {
-        this.configWindow.IsVisible ^= true;
+        this.ConfigWindow.IsVisible ^= true;
     }
 }

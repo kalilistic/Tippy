@@ -31,6 +31,16 @@ public class TippyPlugin : IDalamudPlugin
         TippyController = new TippyController(this);
         this.tippyUI = new TippyUI(this);
         this.tippyProvider = new TippyProvider(PluginInterface, new TippyAPI());
+        CommandManager.AddHandler("/tippy", new CommandInfo(this.ToggleTippy)
+        {
+            HelpMessage = "Show Tippy.",
+            ShowInHelp = true,
+        });
+        CommandManager.AddHandler("/tippyconfig", new CommandInfo(this.ToggleTippyConfig)
+        {
+            HelpMessage = "Show Tippy config.",
+            ShowInHelp = true,
+        });
     }
 
     /// <summary>
@@ -103,6 +113,8 @@ public class TippyPlugin : IDalamudPlugin
     {
         try
         {
+            CommandManager.RemoveHandler("/tippy");
+            CommandManager.RemoveHandler("/tippyconfig");
             Framework.Update -= this.FrameworkOnUpdate;
             this.tippyProvider.Dispose();
             this.tippyUI.Dispose();
@@ -114,6 +126,17 @@ public class TippyPlugin : IDalamudPlugin
         {
             PluginLog.Log(ex, "Failed to dispose plugin.");
         }
+    }
+
+    private void ToggleTippyConfig(string command, string arguments)
+    {
+        this.tippyUI.ConfigWindow.IsVisible ^= true;
+    }
+
+    private void ToggleTippy(string command, string arguments)
+    {
+        Config.IsEnabled ^= true;
+        SaveConfig();
     }
 
     private void FrameworkOnUpdate(Framework framework)

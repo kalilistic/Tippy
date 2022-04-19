@@ -34,6 +34,8 @@ public class TippyUI
     private Vector2 bubbleButtonOffset;
     private Vector2 tippyOffset;
     private int debugSelectedAnimationIndex;
+    private string debugMessageText = string.Empty;
+    private string debugTipText = string.Empty;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="TippyUI"/> class.
@@ -245,6 +247,7 @@ public class TippyUI
     {
         if (TippyPlugin.Config.ShowDebugWindow)
         {
+            ImGui.SetNextWindowSize(ImGuiHelpers.ScaledVector2(260, 350), ImGuiCond.Appearing);
             ImGui.Begin("Tippy Debug Window");
             ImGui.Text($"State: {TippyPlugin.TippyController.TippyState}");
             ImGui.Text($"JobId: {TippyPlugin.JobId}");
@@ -260,9 +263,24 @@ public class TippyUI
             ImGui.SetNextItemWidth(150f * ImGuiHelpers.GlobalScale);
             ImGui.Combo("####Animation", ref this.debugSelectedAnimationIndex, this.debugAnimationNames, this.debugAnimationNames.Length);
             ImGui.SameLine();
-            if (ImGui.SmallButton("Add"))
+            if (ImGui.SmallButton("Add###Animation"))
             {
                 TippyPlugin.TippyController.DebugMessage((AnimationType)this.debugSelectedAnimationIndex);
+            }
+
+            ImGui.InputTextWithHint("###SendMessage", "Message Text", ref this.debugMessageText, 200);
+            ImGui.SameLine();
+            if (ImGui.SmallButton("Send###Message"))
+            {
+                TippyPlugin.TippyController.CloseMessage();
+                TippyPlugin.TippyController.AddMessage(this.debugMessageText, MessageSource.Debug);
+            }
+
+            ImGui.InputTextWithHint("###TipText", "Tip Text", ref this.debugTipText, 200);
+            ImGui.SameLine();
+            if (ImGui.SmallButton("Send###Tip"))
+            {
+                TippyPlugin.TippyController.AddTip(this.debugTipText, MessageSource.Debug);
             }
 
             ImGui.End();

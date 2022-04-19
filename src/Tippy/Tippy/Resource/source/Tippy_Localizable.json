@@ -323,6 +323,30 @@
         "message": "Remember to always cast Kardia on yourself, especially in dungeons.",
         "description": "Tips..cctor"
     },
+    "Tippy_Toggle_Command": {
+        "message": "Show Tippy.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Config_Command": {
+        "message": "Show Tippy config/settings.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Message_Command": {
+        "message": "Send a message for Tippy to show (usually) right away.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Tip_Command": {
+        "message": "Send a tip for Tippy to show later at random.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_MsgHelp_Command": {
+        "message": "You need to send the message after /tippysendmsg. Like /tippysendmsg I love you Tippy.",
+        "description": "TippyPlugin.SendMessage"
+    },
+    "Tippy_TipHelp_Command": {
+        "message": "You need to send the tip after /tippysendtip. Like /tippysendtip I love you Tippy.",
+        "description": "TippyPlugin.SendTip"
+    },
     "###Tippy_Config_Window": {
         "message": "Tippy Config",
         "description": "ConfigWindow.Draw"

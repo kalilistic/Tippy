@@ -8,5 +8,7 @@ namespace Tippy
     {
         Default,
         IPC,
+        User,
+        Debug,
     }
 }

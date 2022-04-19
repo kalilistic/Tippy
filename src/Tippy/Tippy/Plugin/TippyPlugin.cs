@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 
+using CheapLoc;
 using Dalamud.DrunkenToad;
 using Dalamud.Game;
 using Dalamud.Game.ClientState;
@@ -33,12 +34,22 @@ public class TippyPlugin : IDalamudPlugin
         this.tippyProvider = new TippyProvider(PluginInterface, new TippyAPI());
         CommandManager.AddHandler("/tippy", new CommandInfo(this.ToggleTippy)
         {
-            HelpMessage = "Show Tippy.",
+            HelpMessage = Loc.Localize("Tippy_Toggle_Command", "Show Tippy."),
             ShowInHelp = true,
         });
         CommandManager.AddHandler("/tippyconfig", new CommandInfo(this.ToggleTippyConfig)
         {
-            HelpMessage = "Show Tippy config.",
+            HelpMessage = Loc.Localize("Tippy_Config_Command", "Show Tippy config/settings."),
+            ShowInHelp = true,
+        });
+        CommandManager.AddHandler("/tippysendmsg", new CommandInfo(this.SendMessage)
+        {
+            HelpMessage = Loc.Localize("Tippy_Message_Command", "Send a message for Tippy to show (usually) right away."),
+            ShowInHelp = true,
+        });
+        CommandManager.AddHandler("/tippysendtip", new CommandInfo(this.SendTip)
+        {
+            HelpMessage = Loc.Localize("Tippy_Tip_Command", "Send a tip for Tippy to show later at random."),
             ShowInHelp = true,
         });
     }
@@ -115,6 +126,8 @@ public class TippyPlugin : IDalamudPlugin
         {
             CommandManager.RemoveHandler("/tippy");
             CommandManager.RemoveHandler("/tippyconfig");
+            CommandManager.RemoveHandler("/tippysendmsg");
+            CommandManager.RemoveHandler("/tippysendtip");
             Framework.Update -= this.FrameworkOnUpdate;
             this.tippyProvider.Dispose();
             this.tippyUI.Dispose();
@@ -137,6 +150,36 @@ public class TippyPlugin : IDalamudPlugin
     {
         Config.IsEnabled ^= true;
         SaveConfig();
+    }
+
+    private void SendMessage(string command, string arguments)
+    {
+        if (string.IsNullOrWhiteSpace(arguments))
+        {
+            arguments = Loc.Localize("Tippy_MsgHelp_Command", "You need to send the message after /tippysendmsg. Like /tippysendmsg I love you Tippy.");
+        }
+
+        TippyController.CloseMessage();
+        var result = TippyController.AddMessage(arguments, MessageSource.User);
+        if (!result) Logger.LogInfo("Failed to send Tippy Tip.");
+    }
+
+    private void SendTip(string command, string arguments)
+    {
+        bool result;
+        if (string.IsNullOrWhiteSpace(arguments))
+        {
+            arguments = Loc.Localize("Tippy_TipHelp_Command", "You need to send the tip after /tippysendtip. Like /tippysendtip I love you Tippy.");
+            TippyController.CloseMessage();
+            result = TippyController.AddMessage(arguments, MessageSource.User);
+        }
+        else
+        {
+            TippyController.CloseMessage();
+            result = TippyController.AddTip(arguments, MessageSource.User);
+        }
+
+        if (!result) Logger.LogInfo("Failed to send Tippy Message.");
     }
 
     private void FrameworkOnUpdate(Framework framework)

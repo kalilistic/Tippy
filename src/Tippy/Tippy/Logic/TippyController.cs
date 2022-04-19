@@ -327,6 +327,41 @@ public class TippyController
     }
 
     /// <summary>
+    /// Add tip by text.
+    /// </summary>
+    /// <param name="text">message.</param>
+    /// <param name="messageSource">message source.</param>
+    /// <returns>indicator whether successful.</returns>
+    public bool AddTip(string text, MessageSource messageSource)
+    {
+        if (string.IsNullOrWhiteSpace(text)) return false;
+        var tip = new Tip(text)
+        {
+            Source = messageSource,
+        };
+        TippyPlugin.TippyController.IPCTips.Add(tip);
+        TippyPlugin.TippyController.SetupMessages();
+        return true;
+    }
+
+    /// <summary>
+    /// Add message by text.
+    /// </summary>
+    /// <param name="text">message.</param>
+    /// <param name="messageSource">message source.</param>
+    /// <returns>indicator whether successful.</returns>
+    public bool AddMessage(string text, MessageSource messageSource)
+    {
+        if (string.IsNullOrWhiteSpace(text)) return false;
+        var message = new Message(text)
+        {
+            Source = messageSource,
+        };
+        this.MessageQueue.Enqueue(message);
+        return true;
+    }
+
+    /// <summary>
     /// Block message.
     /// </summary>
     public void BlockTip()

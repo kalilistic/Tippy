@@ -21,31 +21,15 @@ namespace Tippy
         /// <inheritdoc />
         public bool RegisterTip(string text)
         {
-            if (!this.IsValidRequest(text)) return false;
-            var tip = new Tip(text)
-            {
-                Source = MessageSource.IPC,
-            };
-            TippyPlugin.TippyController.IPCTips.Add(tip);
-            TippyPlugin.TippyController.SetupMessages();
-            return true;
+            if (!this.CheckInitialized()) return false;
+            return TippyPlugin.TippyController.AddTip(text, MessageSource.IPC);
         }
 
         /// <inheritdoc />
         public bool RegisterMessage(string text)
         {
-            if (!this.IsValidRequest(text)) return false;
-            var message = new Message(text)
-            {
-                Source = MessageSource.IPC,
-            };
-            TippyPlugin.TippyController.MessageQueue.Enqueue(message);
-            return true;
-        }
-
-        private bool IsValidRequest(string text)
-        {
-            return this.CheckInitialized() && !string.IsNullOrWhiteSpace(text);
+            if (!this.CheckInitialized()) return false;
+            return TippyPlugin.TippyController.AddMessage(text, MessageSource.IPC);
         }
 
         private bool CheckInitialized()

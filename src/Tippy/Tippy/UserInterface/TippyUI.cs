@@ -263,7 +263,7 @@ public class TippyUI
             ImGui.SetNextItemWidth(150f * ImGuiHelpers.GlobalScale);
             ImGui.Combo("####Animation", ref this.debugSelectedAnimationIndex, this.debugAnimationNames, this.debugAnimationNames.Length);
             ImGui.SameLine();
-            if (ImGui.SmallButton("Add###Animation"))
+            if (ImGui.SmallButton("Add"))
             {
                 TippyPlugin.TippyController.DebugMessage((AnimationType)this.debugSelectedAnimationIndex);
             }
@@ -274,6 +274,7 @@ public class TippyUI
             {
                 TippyPlugin.TippyController.CloseMessage();
                 TippyPlugin.TippyController.AddMessage(this.debugMessageText, MessageSource.Debug);
+                this.debugMessageText = string.Empty;
             }
 
             ImGui.InputTextWithHint("###TipText", "Tip Text", ref this.debugTipText, 200);
@@ -281,6 +282,7 @@ public class TippyUI
             if (ImGui.SmallButton("Send###Tip"))
             {
                 TippyPlugin.TippyController.AddTip(this.debugTipText, MessageSource.Debug);
+                this.debugTipText = string.Empty;
             }
 
             ImGui.End();

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Threading;
 
 using Dalamud.DrunkenToad;
 using Dalamud.Interface;
@@ -30,6 +31,7 @@ public class TippyController
     private Vector2 uv0;
     private Vector2 uv1;
     private bool isSoundPlaying;
+    private int framesCount;
 
     /// <summary>
     /// Initializes a new instance of the <see cref="TippyController"/> class.
@@ -207,13 +209,20 @@ public class TippyController
     /// <param name="num">sound to play.</param>
     public void PlaySound(int num)
     {
-        if (!TippyPlugin.Config.IsSoundEnabled || this.isSoundPlaying) return;
-        if (num == 0) return;
-        this.isSoundPlaying = true;
-        this.reader = new Mp3FileReader(new MemoryStream(this.sounds[num]));
-        this.waveOut.Init(this.reader);
-        this.waveOut.Play();
-        this.waveOut.PlaybackStopped += this.WaveOutOnPlaybackStopped;
+        try
+        {
+            if (!TippyPlugin.Config.IsSoundEnabled || this.isSoundPlaying) return;
+            if (num == 0) return;
+            this.isSoundPlaying = true;
+            this.reader = new Mp3FileReader(new MemoryStream(this.sounds[num]));
+            this.waveOut.Init(this.reader);
+            this.waveOut.Play();
+            this.waveOut.PlaybackStopped += this.WaveOutOnPlaybackStopped;
+        }
+        catch (Exception)
+        {
+            this.isSoundPlaying = false;
+        }
     }
 
     /// <summary>
@@ -231,9 +240,17 @@ public class TippyController
                 this.JobChanged = false;
             }
 
-            // check if ready for next message
-            if ((this.MessageQueue.Count > 0 && this.TippyState != TippyState.GivingMessage) || (this.TippyState == TippyState.Idle &&
-                DateUtil.CurrentTime() - this.LastMessageFinished > TippyPlugin.Config.TipCooldown))
+            // check if new message in queue to show
+            if (this.MessageQueue.Count > 0 && this.TippyState != TippyState.GivingMessage)
+            {
+                this.CloseMessage();
+                this.CurrentFrameIndex = 0;
+                this.SetupNextMessage();
+            }
+
+            // check if waiting for new tip
+            else if (this.TippyState == TippyState.Idle &&
+                      DateUtil.CurrentTime() - this.LastMessageFinished > TippyPlugin.Config.TipCooldown)
             {
                 this.SetupNextMessage();
             }
@@ -251,6 +268,7 @@ public class TippyController
 
             // get all frames for animation
             var frames = this.tippyDataList.First(data => data.Type == this.CurrentAnimationType).Frames;
+            this.framesCount = frames.Count;
 
             // get current frame
             var frame = frames[this.CurrentFrameIndex];
@@ -265,7 +283,7 @@ public class TippyController
             }
 
             // set to final if next frame is last
-            if (this.CurrentFrameIndex >= frames.Count - 2)
+            if (this.CurrentFrameIndex == frames.Count - 1)
             {
                 this.CurrentFrameIndex += 1;
                 this.animationIsFinished = true;
@@ -294,7 +312,7 @@ public class TippyController
         catch (Exception)
         {
             // show previous frame in case something went wrong
-            Logger.LogDebug("Failed frame at index " + this.CurrentFrameIndex);
+            Logger.LogDebug("Failed frame at index " + this.CurrentFrameIndex + "/" + this.framesCount);
             return this.current;
         }
     }
@@ -306,6 +324,14 @@ public class TippyController
     {
         try
         {
+            while (this.isSoundPlaying)
+            {
+                Thread.Sleep(100);
+            }
+
+            this.isSoundPlaying = true;
+            this.MessageQueue.Clear();
+            this.CloseMessage();
             this.FrameTimer.Stop();
             this.reader?.Dispose();
             this.waveOut.Dispose();

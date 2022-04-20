@@ -133,12 +133,13 @@ public class TippyPlugin : IDalamudPlugin
             this.tippyUI.Dispose();
             TippyController.Dispose();
             this.localization.Dispose();
-            GC.SuppressFinalize(this);
         }
         catch (Exception ex)
         {
             PluginLog.Log(ex, "Failed to dispose plugin.");
         }
+
+        GC.SuppressFinalize(this);
     }
 
     private void ToggleTippyConfig(string command, string arguments)

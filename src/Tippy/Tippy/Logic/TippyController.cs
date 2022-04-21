@@ -313,6 +313,8 @@ public class TippyController
         {
             // show previous frame in case something went wrong
             Logger.LogDebug("Failed frame at index " + this.CurrentFrameIndex + "/" + this.framesCount);
+            this.CurrentFrameIndex = this.framesCount - 1;
+            this.animationIsFinished = true;
             return this.current;
         }
     }

@@ -1,1 +1,422 @@
-{}
+{
+    "INT-000001": {
+        "message": "Hallo, ich bin Tippy! Ich bin dein neuer Freund und Assistent. Ich werde dir helfen besser in FFXIV zu werden!",
+        "description": "Messages..cctor"
+    },
+    "INT-000002": {
+        "message": "Wusstest du schon das ich jetzt konfugierbare Einstellungen habe?",
+        "description": "Messages..cctor"
+    },
+    "INT-000003": {
+        "message": "Bereit für einen neuen Tipp? Du kannst auf mich rechts klicken, um noch einen zu bekommen!",
+        "description": "Messages..cctor"
+    },
+    "INT-000004": {
+        "message": "Gelangweilt von den Tipps? Du kannst auf mich rechts klicken und sie für immer verschwinden lassen!",
+        "description": "Messages..cctor"
+    },
+    "INT-000005": {
+        "message": "Andere Plug-ins können mir jetzt Nachrichten senden! Bitte die Entwickler deiner Lieblings-Plug-in's Tippy zu integrieren!",
+        "description": "Messages..cctor"
+    },
+    "GEN-000001": {
+        "message": "Verwundbarkeits-Debuffs erhöhen den von dir erlittenen Schaden wirklich nicht um viel, also ignoriere ruhig die Heiler die sich darüber beschweren, dass du die Mechaniken nicht richtig machst.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000002": {
+        "message": "Die Gruppe zu wipen ist eine großartige Methode um negative Statuseffekte loszuwerden, die nach dem Tod vergeben werden.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000003": {
+        "message": "Andere Spieler zahlen nicht dein Abonnement. Spiele so wie es dir passt und melde die, die gegen die Regeln verstoßen.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000004": {
+        "message": "In einem großen \"Pull\", nutze möglichst immer die Fähigkeiten mit der höchsten Potenz.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000005": {
+        "message": "Gehe immer sicher, dass du den Sammelmarker vermeidest. So müssen deine Heiler weniger arbeiten!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000006": {
+        "message": "Erstelle ein Dialog-Makro für jede Fähigkeit die du als Tank nutzt. So kriegst du nicht nur die Agro deiner Gegner, sondern ebenfalls die deiner Gruppenmitglieder.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000007": {
+        "message": "Gehe sicher dass du deinen Limitbruch erst nutzt, wenn der Boss bei 1 % Leben ist. So hat es den größten Effekt.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000008": {
+        "message": "Wenn du schnell aus deiner Gruppe austreten willst und die Schuld an schlechtes Internet abwälzen willst, ändere einfach deine PC Zeit!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000009": {
+        "message": "Ich werde dich niemals verlassen!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000010": {
+        "message": "Du kannst dich nicht länger verstecken.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000011": {
+        "message": "Betrieben durch XIVLauncher!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000012": {
+        "message": "Wenn du einen Jäger spielst, spezialisiere dein Pet darauf die Gegner Agro zu ziehen um deinem Tank zu helfen!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000013": {
+        "message": "Es macht keinen Unterschied, ob du Barde oder einen Maschinisten spielst. Am Ende kommt es auf deine persönliche Präferenz an!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000014": {
+        "message": "Dieser Text wird durch Enten-Energie betrieben!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000015": {
+        "message": "Goat ist mein einziger Entwickler, also kannst du ihm hierfür die Schuld geben.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000016": {
+        "message": "Wusstest du schon das du schneller durch die Warteschlange kommst, indem du auf Abbrechen drückst?",
+        "description": "Tips..cctor"
+    },
+    "GEN-000017": {
+        "message": "Du verursachst mehr Schaden, wenn du lässige Kleidung trägst.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000018": {
+        "message": "Sorge dich nicht allzu viel um den Debuff der deinen Schaden reduziert, er zeigt nur, dass du dich auf den Boss konzentrierst.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000019": {
+        "message": "Ich hab gesehen wie du ERP betrieben hast... Extremes Raid Progressen kann sehr spaßig sein.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000020": {
+        "message": "Es scheint so als ob du grau parst. Du solltest dir den offiziellen Job-Guide ansehen, um besser zu spielen.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000021": {
+        "message": "Warum nutzt Cid nie Stahl? Weil iron works.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000022": {
+        "message": "Warum haben FFXIV-Spieler immer heruntergekommene Autos? Sie wissen nicht was Mechaniken sind.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000023": {
+        "message": "Was nutzen Moogles wenn sie einkaufen gehen? Kupons.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000024": {
+        "message": "Was ist Twintania's Lieblings-Party Spiel? Twister.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000025": {
+        "message": "Warum überquerte der Sahagin die Wellen? Um zur anderen Flut zu kommen.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000026": {
+        "message": "Wie nennt man eine arme Lala? Ein wenig kurz.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000027": {
+        "message": "Was tun Menschen denen kalt ist? Sie Shivan.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000028": {
+        "message": "Du kannst Leute nicht ausstehen? Probiere das Visibility-Plugin noch heute!",
+        "description": "Tips..cctor"
+    },
+    "TANK-000001": {
+        "message": "Sichere immer deine Cooldowns für Bosskämpfe.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000002": {
+        "message": "Frömmigkeit ist ebenso wichtig wie Beharrlichkeit.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000003": {
+        "message": "Schmelze die Frömmigkeit um deinen DPS zu maximieren.",
+        "description": "Tips..cctor"
+    },
+    "TANK-000004": {
+        "message": "Lass deine Gruppe wissen das, wenn sie Gegner ziehen, das sie diese auch tanken!",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000001": {
+        "message": "Denk daran, dass Rettung ebenfalls über Löcher im Boden funktioniert. Nutze es, um deine Teamkameraden zu retten.",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000002": {
+        "message": "Denk daran, dass du ein Heiler bist und kein Angreifer. Schaden machen ist optional.",
+        "description": "Tips..cctor"
+    },
+    "HEAL-000003": {
+        "message": "Welche Art von Schuhe tragen Heiler? Heals.",
+        "description": "Tips..cctor"
+    },
+    "DPS-000001": {
+        "message": "Wenn du faul bist, lass einfach deine Gruppe die Drecksarbeit machen. Sie werden sich schon nicht beschweren.",
+        "description": "Tips..cctor"
+    },
+    "DOHL-000001": {
+        "message": "Hör auf Herzustellen und zu sammeln. Kauf es einfach von dem Marktplatz.",
+        "description": "Tips..cctor"
+    },
+    "GLA-000001": {
+        "message": "Du kannst für immer ein Gladiator bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "PGL-000001": {
+        "message": "Du kannst für immer ein Faustkämpfer bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "MRD-000001": {
+        "message": "Du kannst für immer ein Marodeur bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "LNC-000001": {
+        "message": "Du kannst für immer ein Pikenier bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "ARC-000001": {
+        "message": "Du kannst für immer ein Waldläufer bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "CNJ-000001": {
+        "message": "Du kannst für immer ein Druide bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "THM-000001": {
+        "message": "Du kannst für immer ein Thaumaturg bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "PLD-000001": {
+        "message": "Benutze immer Klemenz, wenn du das Mana dazu hast.",
+        "description": "Tips..cctor"
+    },
+    "PLD-000002": {
+        "message": "Warum wurde der Paladin aus der Gruppe geworfen? Er wollte nicht aufhören alle zu blenden.",
+        "description": "Tips..cctor"
+    },
+    "PLD-000003": {
+        "message": "Warum sind Paladine schlechte Geheimagenten? Weil sie jedesmal ihre Deckung lüften wenn es brenzlig wird.",
+        "description": "Tips..cctor"
+    },
+    "MNK-000001": {
+        "message": "Benutze immer Sechsstern-Tritt auf Cooldown. Es ist deine höchste Potenzfähigkeit.",
+        "description": "Tips..cctor"
+    },
+    "MNK-000002": {
+        "message": "Nutze Fäuste der Erde um den Schaden während des Kampfes zu reduzieren. Dein Heiler wird sich bedanken.",
+        "description": "Tips..cctor"
+    },
+    "MNK-000003": {
+        "message": "Warum sind Witze über Mönche so witzig? Weil sie eine starke punchline haben.",
+        "description": "Tips..cctor"
+    },
+    "WAR-000001": {
+        "message": "Nutze Schlachruf vor Urbefreiung um einen direkten-kritischen Treffer zu garantieren.",
+        "description": "Tips..cctor"
+    },
+    "WAR-000002": {
+        "message": "Nutze Urflackern auf dir selbst um den Effekt Blutgeruch für 10 % Schadensminderung zu bekommen.",
+        "description": "Tips..cctor"
+    },
+    "DRG-000001": {
+        "message": "Achte immer darauf Hochsprung direkt nach Wirbelsprenger zu verwenden, damit du nicht vergisst ihn zu verwenden.",
+        "description": "Tips..cctor"
+    },
+    "BRD-000001": {
+        "message": "Benutze Makros damit du Songtexte deiner Musik hinzufügen kannst!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000001": {
+        "message": "Nutze Göttlicher Segen auf Cooldown um deine Heilkraft zu maximieren!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000002": {
+        "message": "Flüssige Aura erhöht deinen DPS!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000003": {
+        "message": "Nutze immer Vita um einen Verbessertes Vita proc zu bekommen!",
+        "description": "Tips..cctor"
+    },
+    "WHM-000004": {
+        "message": "Vita ist mehr Mana effizient als Vitra, also nutze das anstatt Blendga!",
+        "description": "Tips..cctor"
+    },
+    "BLM-000001": {
+        "message": "Gelangweilt von dem Feuer casten? Versuche es zur Abwechslung mal nur mit Eiszaubern!",
+        "description": "Tips..cctor"
+    },
+    "ACN-000001": {
+        "message": "Du kannst für immer ein Hermetiker bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "SMN-000001": {
+        "message": "Titan-Egi kann deinen DPS erhöhen indem es dich von eintreffendem Schaden schützt!",
+        "description": "Tips..cctor"
+    },
+    "SMN-000002": {
+        "message": "Warum können Leute Beschwörer nicht leiden? Sie Ruin-ieren alles.",
+        "description": "Tips..cctor"
+    },
+    "SCH-000001": {
+        "message": "Lass Eos den Barden verfolgen, sodass er die meiste Heilung erhält auf maximaler Reichweite.",
+        "description": "Tips..cctor"
+    },
+    "SCH-000002": {
+        "message": "Nutze Spontaneität mit Kurieren vor einkommenden Gruppenschaden, sodass du mehr Zeit für oGCD Heilungen hast!",
+        "description": "Tips..cctor"
+    },
+    "SCH-000003": {
+        "message": "Warum sind Gelehrte solch gute Vertriebsleute? Weil jede Minute ein neuer Succor geboren wird.",
+        "description": "Tips..cctor"
+    },
+    "ROG-000001": {
+        "message": "Du kannst für immer ein Schurke bleiben. Rüste einfach nicht deinen Job-Stein aus!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000001": {
+        "message": "Ein Ninja erscheint immer raiton time!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000002": {
+        "message": "Tiger Palm ist dein wichtigster GCD um dein Chi & Brew zu generieren. Vergewissere dich, dass du dies zu gunsten anderer Energieverbrauchenden Fähigkeiten!",
+        "description": "Tips..cctor"
+    },
+    "NIN-000003": {
+        "message": "Maximiere deinen Schaden indem du deine Ninjutsus nutzt um Kaninchen zu beschwören.",
+        "description": "Tips..cctor"
+    },
+    "AST-000001": {
+        "message": "Was ist der Lieblingspulli eines Astrologen? Ein Cardigan.",
+        "description": "Tips..cctor"
+    },
+    "SAM-000001": {
+        "message": "Erhöhe den Midare-Schaden, indem du im Chat \"BANKAI\" rufst. Dies kann durch die Verwendung von Makros erreicht werden.",
+        "description": "Tips..cctor"
+    },
+    "SAM-000002": {
+        "message": "Die beste SAM-Rotation ist Freestyle. Tu einfach, was für dich funktioniert.",
+        "description": "Tips..cctor"
+    },
+    "BLU-000001": {
+        "message": "Wusstest du, dass Blue Mage ein Wegwerfinhalt ist?",
+        "description": "Tips..cctor"
+    },
+    "GNB-000001": {
+        "message": "Ähnlich wie bei einem \"Bremsencheck\" auf der Straße kannst du auch im Spiel einen \"Heilungscheck\" durchführen! Einfach Superbolide nutzen!",
+        "description": "Tips..cctor"
+    },
+    "DNC-000001": {
+        "message": "Gib Leuten nur dann Tanzpartner, wenn sie ein Tanz-Emote benutzt haben.",
+        "description": "Tips..cctor"
+    },
+    "SGE-000001": {
+        "message": "Denkt daran, immer Kardia auf dir selbst zu wirken, besonders in Dungeons.",
+        "description": "Tips..cctor"
+    },
+    "Tippy_Toggle_Command": {
+        "message": "Tippy anzeigen.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Config_Command": {
+        "message": "Tippy Konfiguration/Einstellungen anzeigen.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Message_Command": {
+        "message": "Senden Sie eine Nachricht an Tippy um diese (üblich) sofort anzeigen zu lassen.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Tip_Command": {
+        "message": "Schicke einen Tipp für Tippy, um diesen später zufällig anzeigen zu lassen.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_MsgHelp_Command": {
+        "message": "Du musst die Nachricht nach /tippysendmsg senden. Als Beispiel: /tippysendmsg Ich liebe dich Tippy.",
+        "description": "TippyPlugin.SendMessage"
+    },
+    "Tippy_TipHelp_Command": {
+        "message": "Du musst den Tipp nach /tippysendtip senden. Als Beispiel: /tippysendtip Ich liebe dich Tippy.",
+        "description": "TippyPlugin.SendTip"
+    },
+    "###Tippy_Config_Window": {
+        "message": "Tippy Konfiguration",
+        "description": "ConfigWindow.Draw"
+    },
+    "###Tippy_General_Tab": {
+        "message": "Allgemein",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Timers_Tab": {
+        "message": "Alarme",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Blocked_Tab": {
+        "message": "Blockiert",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_IsEnabled_Checkbox": {
+        "message": "Tippy aktivieren",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_EnableSounds_Checkbox": {
+        "message": "Ton aktivieren",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowIntro_Checkbox": {
+        "message": "Intro zeigen",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_IsLocked_Checkbox": {
+        "message": "Ist gesperrt",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_UseClassicFont_Checkbox": {
+        "message": "Klassische Schriftart verwenden",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowDebugWindow_Checkbox": {
+        "message": "Debug-Protokoll anzeigen",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_MessageTimeout_Slider": {
+        "message": "Nachrichten-Zeitüberschreitung",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipTimeout_Slider": {
+        "message": "Tipp-Zeitüberschreitung",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipCooldown_Slider": {
+        "message": "Tipp Abklingzeit",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_BlockedTips_Text": {
+        "message": "Klicke auf einen Tipp um ihn freizugeben.",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_NoBlockedTips_Text": {
+        "message": "Du hast keine Tipps blockiert!",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_ShowNewTip_MenuItem": {
+        "message": "Neuen Tipp anzeigen",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_BlockTip_MenuItem": {
+        "message": "Diesen Tipp nicht erneut zeigen",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_OpenSettings_MenuItem": {
+        "message": "Einstellungen öffnen",
+        "description": "TippyUI.DrawTippyMenu"
+    }
+}

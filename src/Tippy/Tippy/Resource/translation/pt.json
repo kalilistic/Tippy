@@ -1,1 +1,222 @@
-{}
+{
+    "INT-000001": {
+        "message": "Olá, eu sou o Tippy! Eu sou o seu novo amiguinho e assistente. Vou ajudá-lo a ficar melhor no FFXIV!",
+        "description": "Messages..cctor"
+    },
+    "INT-000002": {
+        "message": "Você sabe que agora tenho opções de configuração?",
+        "description": "Messages..cctor"
+    },
+    "INT-000003": {
+        "message": "Pronto para uma nova dica? Você pode clicar com o botão direito em mim para solicitar outra!",
+        "description": "Messages..cctor"
+    },
+    "INT-000004": {
+        "message": "Cansado de uma dica? Você pode clicar com o botão direito em mim para escondê-la para sempre!",
+        "description": "Messages..cctor"
+    },
+    "INT-000005": {
+        "message": "Outros plugins agora podem me enviar mensagens! Peça ao seu desenvolvedor de plugins favorito para integrá-lo com o Tippy!",
+        "description": "Messages..cctor"
+    },
+    "GEN-000001": {
+        "message": "As stacks de Vulnerabilidade, na verdade, não afetam o dano que você recebe tanto assim, então ignore qualquer healer que reclama de você não fazer mecânicas corretamente.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000002": {
+        "message": "Dar wipe no seu time é um excelente método para eliminar os status negativos deles, incluindo a morte.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000003": {
+        "message": "Jogadores em seu grupo não pagam sua sub. Jogue o jogo como quiser e reporte-os por assédio.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000004": {
+        "message": "Em um pull grande, use sempre a habilidade com a maior de potência de sua barra.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000005": {
+        "message": "Certifique-se de evitar o marcador de stack para que seus healers tenham menos pessoas para curar durante as raids!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000006": {
+        "message": "Coloque macros com frases em todos os seus ataques como tank para também receber aggro dos membros do seu grupo.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000007": {
+        "message": "Certifique-se de conservar seu LB até que o chefe esteja em 1 porcento de energia. Isso proporcionará seu máximo efeito.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000008": {
+        "message": "Se você quiser abandonar seu grupo rapidamente jogando a culpa na queda de conexão, basta mudar o horário do seu PC!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000009": {
+        "message": "Eu nunca te deixarei!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000010": {
+        "message": "Você não pode continuar a esconder.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000011": {
+        "message": "Com tecnologia de XIVLauncher!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000012": {
+        "message": "Ao jogar de Hunter, especialize seu animal de estimação em provocação para ajudar seu tank!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000013": {
+        "message": "Não importa se você jogar de BRD ou MCH, isso é uma escolha pessoal!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000014": {
+        "message": "Este texto é alimentado por energia de pato!",
+        "description": "Tips..cctor"
+    },
+    "GEN-000015": {
+        "message": "Goat é meu desenvolvedor original, então você pode culpá-lo por isso.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000016": {
+        "message": "Você sabia que pode fazer a fila andar mais rápido apertando \"cancelar\"?",
+        "description": "Tips..cctor"
+    },
+    "GEN-000017": {
+        "message": "Você faz mais dano se usar roupas informais.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000018": {
+        "message": "Não se preocupe com danos baixos, isso apenas mostra que você está focando no chefe.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000019": {
+        "message": "Eu vi você fazendo ERP... Extremos Resultados de Progressão podem ser divertidos.",
+        "description": "Tips..cctor"
+    },
+    "GEN-000020": {
+        "message": "Parece que seu parse está cinza. Você deveria ler o guia oficial do seu job para jogar melhor.",
+        "description": "Tips..cctor"
+    },
+    "GLA-000001": {
+        "message": "Você pode ficar como um gladiador para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "PGL-000001": {
+        "message": "Você pode ficar como um pugilista para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "MRD-000001": {
+        "message": "Você pode ficar como um marauder para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "LNC-000001": {
+        "message": "Você pode ficar como um lancer para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "ARC-000001": {
+        "message": "Você pode ficar como um arqueiro para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "CNJ-000001": {
+        "message": "Você pode ficar como um conjurer para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "THM-000001": {
+        "message": "Você pode ficar como um thaumaturge para sempre, só não equipar sua job stone!",
+        "description": "Tips..cctor"
+    },
+    "PLD-000001": {
+        "message": "Use clemency sempre que tiver mana.",
+        "description": "Tips..cctor"
+    },
+    "Tippy_Toggle_Command": {
+        "message": "Mostrar Tippy.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_Config_Command": {
+        "message": "Exibir configurações do Tippy.",
+        "description": "TippyPlugin..ctor"
+    },
+    "Tippy_MsgHelp_Command": {
+        "message": "Você precisa enviar a mensagem após /tippysendmsg. Como /tippysendmsg eu te amo Tippy.",
+        "description": "TippyPlugin.SendMessage"
+    },
+    "Tippy_TipHelp_Command": {
+        "message": "Você precisa enviar a dica após /tippysendtip. Como /tippysendtip Eu amo você Tippy.",
+        "description": "TippyPlugin.SendTip"
+    },
+    "###Tippy_Config_Window": {
+        "message": "Configuração do Tippy",
+        "description": "ConfigWindow.Draw"
+    },
+    "###Tippy_General_Tab": {
+        "message": "Geral",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Timers_Tab": {
+        "message": "Timer",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_Blocked_Tab": {
+        "message": "Bloqueado",
+        "description": "ConfigWindow.DrawTabs"
+    },
+    "###Tippy_IsEnabled_Checkbox": {
+        "message": "Habilitar Tippy",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_EnableSounds_Checkbox": {
+        "message": "Ativar Sons",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowIntro_Checkbox": {
+        "message": "Mostrar introdução",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_IsLocked_Checkbox": {
+        "message": "Está Bloqueado",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_UseClassicFont_Checkbox": {
+        "message": "Usar fonte Clássica",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_ShowDebugWindow_Checkbox": {
+        "message": "Mostrar Janela de Debug",
+        "description": "ConfigWindow.DrawGeneral"
+    },
+    "###Tippy_MessageTimeout_Slider": {
+        "message": "Timeout da Mensagem",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipTimeout_Slider": {
+        "message": "Timeout de Dica",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_TipCooldown_Slider": {
+        "message": "Cooldown de dica",
+        "description": "ConfigWindow.DrawTimers"
+    },
+    "###Tippy_BlockedTips_Text": {
+        "message": "Clique em uma dica para desbloquear.",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_NoBlockedTips_Text": {
+        "message": "Você não bloqueou nenhuma dica!",
+        "description": "ConfigWindow.DrawBlocked"
+    },
+    "###Tippy_ShowNewTip_MenuItem": {
+        "message": "Mostrar nova dica",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_BlockTip_MenuItem": {
+        "message": "Não exibir esta dica novamente",
+        "description": "TippyUI.DrawTippyMenu"
+    },
+    "###Tippy_OpenSettings_MenuItem": {
+        "message": "Abrir configurações",
+        "description": "TippyUI.DrawTippyMenu"
+    }
+}

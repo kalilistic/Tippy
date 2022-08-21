@@ -105,13 +105,6 @@ public class ConfigWindow
             TippyPlugin.SaveConfig();
         }
 
-        var playSounds = TippyPlugin.Config.IsSoundEnabled;
-        if (ImGui.Checkbox(Loc.Localize("###Tippy_EnableSounds_Checkbox", "Enable Sounds"), ref playSounds))
-        {
-            TippyPlugin.Config.IsSoundEnabled = playSounds;
-            TippyPlugin.SaveConfig();
-        }
-
         var showIntro = TippyPlugin.Config.ShowIntroMessages;
         if (ImGui.Checkbox(Loc.Localize("###Tippy_ShowIntro_Checkbox", "Show Intro"), ref showIntro))
         {

@@ -8,7 +8,6 @@ using System.Threading;
 
 using Dalamud.DrunkenToad;
 using Dalamud.Interface;
-using NAudio.Wave;
 using Newtonsoft.Json;
 
 namespace Tippy;
@@ -21,11 +20,10 @@ public class TippyController
     private readonly Vector2 spriteSize = new(124, 93);
     private readonly Vector2 sheetSize = new(3348, 3162);
     private readonly List<AnimationData> tippyDataList;
-    private readonly WaveOut waveOut = new();
+    // ReSharper disable once CollectionNeverQueried.Local
     private readonly Dictionary<int, byte[]> sounds = new();
     private TippyFrame current = null!;
     private bool animationIsFinished;
-    private Mp3FileReader? reader;
     private Vector2 size;
     private Vector2 coords;
     private Vector2 uv0;
@@ -204,28 +202,6 @@ public class TippyController
     }
 
     /// <summary>
-    /// Play sound.
-    /// </summary>
-    /// <param name="num">sound to play.</param>
-    public void PlaySound(int num)
-    {
-        try
-        {
-            if (!TippyPlugin.Config.IsSoundEnabled || this.isSoundPlaying) return;
-            if (num == 0) return;
-            this.isSoundPlaying = true;
-            this.reader = new Mp3FileReader(new MemoryStream(this.sounds[num]));
-            this.waveOut.Init(this.reader);
-            this.waveOut.Play();
-            this.waveOut.PlaybackStopped += this.WaveOutOnPlaybackStopped;
-        }
-        catch (Exception)
-        {
-            this.isSoundPlaying = false;
-        }
-    }
-
-    /// <summary>
     /// Draw tippy animation.
     /// </summary>
     /// <returns>animation spec for imgui.</returns>
@@ -278,7 +254,6 @@ public class TippyController
             {
                 this.size = ImGuiHelpers.ScaledVector2(this.spriteSize.X, this.spriteSize.Y);
                 this.current = new TippyFrame(this.size, this.uv0, this.uv1, frame.Sound);
-                TippyPlugin.TippyController.PlaySound(this.current.sound);
                 return this.current;
             }
 
@@ -302,9 +277,6 @@ public class TippyController
             this.uv0 = this.ToSpriteSheetScale(this.coords);
             this.uv1 = this.ToSpriteSheetScale(this.coords + this.spriteSize);
             this.current = new TippyFrame(this.size, this.uv0, this.uv1, frame.Sound);
-
-            // play sound
-            TippyPlugin.TippyController.PlaySound(this.current.sound);
 
             // return animation
             return this.current;
@@ -335,8 +307,6 @@ public class TippyController
             this.MessageQueue.Clear();
             this.CloseMessage();
             this.FrameTimer.Stop();
-            this.reader?.Dispose();
-            this.waveOut.Dispose();
         }
         catch (Exception ex)
         {
@@ -415,12 +385,6 @@ public class TippyController
             LoopAnimation = true,
         };
         this.MessageQueue.Enqueue(msg);
-    }
-
-    private void WaveOutOnPlaybackStopped(object? sender, StoppedEventArgs e)
-    {
-        this.waveOut.PlaybackStopped -= this.WaveOutOnPlaybackStopped;
-        this.isSoundPlaying = false;
     }
 
     private IEnumerable<Tip> ShuffleTips(IEnumerable<Tip> tips)

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Version>1.3.1.0</Version>
+		<Version>1.3.2.0</Version>
 		<Title>Tippy</Title>
 		<Authors>kalilistic</Authors>
 		<TargetFramework>net6.0-windows</TargetFramework>
@@ -82,7 +82,7 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="DalamudPackager" Version="2.1.7" />
+		<PackageReference Include="DalamudPackager" Version="2.1.8" />
 		<PackageReference Include="Dalamud.DrunkenToad" Version="1.2.0" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
 			<PrivateAssets>all</PrivateAssets>

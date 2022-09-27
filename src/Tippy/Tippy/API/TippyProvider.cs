@@ -17,6 +17,11 @@ namespace Tippy
         public const string LabelProviderApiVersion = "Tippy.APIVersion";
 
         /// <summary>
+        /// IsInitialized state.
+        /// </summary>
+        public const string LabelProviderIsInitialized = "Tippy.IsInitialized";
+
+        /// <summary>
         /// Register Tip.
         /// </summary>
         public const string LabelProviderRegisterTip = "Tippy.RegisterTip";
@@ -35,6 +40,11 @@ namespace Tippy
         /// Provider API Version.
         /// </summary>
         public ICallGateProvider<int>? ProviderAPIVersion;
+
+        /// <summary>
+        /// Provider IsInitialized state.
+        /// </summary>
+        public ICallGateProvider<bool>? ProviderIsInitialized;
 
         /// <summary>
         /// Register Tip.
@@ -67,6 +77,16 @@ namespace Tippy
 
             try
             {
+                this.ProviderIsInitialized = pluginInterface.GetIpcProvider<bool>(LabelProviderIsInitialized);
+                this.ProviderIsInitialized.RegisterFunc(() => api.IsInitialized);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Error registering IPC provider for {LabelProviderIsInitialized}:\n{ex}");
+            }
+
+            try
+            {
                 this.ProviderRegisterTip = pluginInterface.GetIpcProvider<string, bool>(LabelProviderRegisterTip);
                 this.ProviderRegisterTip.RegisterFunc(api.RegisterTip);
             }
@@ -84,6 +104,9 @@ namespace Tippy
             {
                 Logger.LogError($"Error registering IPC provider for {LabelProviderRegisterMessage}:\n{e}");
             }
+
+            this.API.IsInitialized = true;
+            this.ProviderIsInitialized?.SendMessage();
         }
 
         /// <summary>
@@ -91,7 +114,10 @@ namespace Tippy
         /// </summary>
         public void Dispose()
         {
+            this.API.IsInitialized = false;
+            this.ProviderIsInitialized?.SendMessage();
             this.ProviderAPIVersion?.UnregisterFunc();
+            this.ProviderIsInitialized?.UnregisterFunc();
             this.ProviderRegisterTip?.UnregisterFunc();
             this.ProviderRegisterMessage?.UnregisterFunc();
         }

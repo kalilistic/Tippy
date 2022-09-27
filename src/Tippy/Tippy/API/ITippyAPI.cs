@@ -11,6 +11,11 @@ namespace Tippy
         public int APIVersion { get; }
 
         /// <summary>
+        /// Gets or sets a value indicating whether tippy API is initialized.
+        /// </summary>
+        public bool IsInitialized { get; set; }
+
+        /// <summary>
         /// Register Tip.
         /// This will be added to the standard tip queue and will be displayed eventually at random.
         /// This can be used when you want to add your own tips.

@@ -12,7 +12,7 @@ namespace Tippy
             new("INT-000003", Localization.Localize("INT-000003", "Ready for a new tip? You can right click on me to request another one!"), AnimationType.Read),
             new("INT-000004", Localization.Localize("INT-000004", "Bored of a tip? You can right click on me to hide it forever!"), AnimationType.TrashTornado),
             new("INT-000005", Localization.Localize("INT-000005", "Other plugins can now send me messages! Ask your favorite plugin developer to integrate with Tippy!"), AnimationType.Writing),
-            new("INT-000006", Localization.Localize("INT-000006", "Did you know I lost my voice for awhile? Ask Phil in goat's place discord to explain.")),
+            new("INT-000006", Localization.Localize("INT-000006", "Did you know I lost my voice for awhile? Ask Phil in goat place discord to explain.")),
         };
     }
 }

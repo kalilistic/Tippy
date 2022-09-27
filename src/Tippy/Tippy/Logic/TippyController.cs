@@ -8,6 +8,7 @@ using System.Threading;
 
 using Dalamud.DrunkenToad;
 using Dalamud.Interface;
+using NAudio.Wave;
 using Newtonsoft.Json;
 
 namespace Tippy;
@@ -21,7 +22,7 @@ public class TippyController
     private readonly Vector2 sheetSize = new(3348, 3162);
     private readonly List<AnimationData> tippyDataList;
     // ReSharper disable once CollectionNeverQueried.Local
-    private readonly Dictionary<int, byte[]> sounds = new();
+    private readonly Dictionary<int, string> sounds = new();
     private TippyFrame current = null!;
     private bool animationIsFinished;
     private Vector2 size;
@@ -53,7 +54,7 @@ public class TippyController
         // set sounds
         for (var i = 1; i < 16; i++)
         {
-            this.sounds.Add(i, File.ReadAllBytes(plugin.GetResourcePath($"sound_{i}.mp3")));
+            this.sounds.Add(i, plugin.GetResourcePath($"sound_{i}.mp3"));
         }
 
         this.FrameTimer.Start();
@@ -202,6 +203,61 @@ public class TippyController
     }
 
     /// <summary>
+    /// Play sound.
+    /// </summary>
+    /// <param name="num">sound to play.</param>
+    public void PlaySound(int num)
+    {
+        if (!TippyPlugin.Config.IsSoundEnabled || this.isSoundPlaying) return;
+        if (num == 0) return;
+        this.isSoundPlaying = true;
+        new Thread(() =>
+        {
+            WaveStream reader;
+            try
+            {
+                reader = new MediaFoundationReader(this.sounds[num]);
+            }
+            catch (Exception ex)
+            {
+                this.isSoundPlaying = false;
+                Logger.LogError("Failed to create wave file reader", ex);
+                return;
+            }
+
+            using var channel = new WaveChannel32(reader)
+            {
+                Volume = 1f,
+                PadWithZeroes = false,
+            };
+
+            using (reader)
+            {
+                using var output = new DirectSoundOut();
+
+                try
+                {
+                    output.Init(channel);
+                    output.Play();
+
+                    while (output.PlaybackState == PlaybackState.Playing)
+                    {
+                        Thread.Sleep(500);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    this.isSoundPlaying = false;
+                    Logger.LogError("Failed to create play sound", ex);
+                    return;
+                }
+            }
+
+            this.isSoundPlaying = false;
+        }).Start();
+    }
+
+    /// <summary>
     /// Draw tippy animation.
     /// </summary>
     /// <returns>animation spec for imgui.</returns>
@@ -254,6 +310,7 @@ public class TippyController
             {
                 this.size = ImGuiHelpers.ScaledVector2(this.spriteSize.X, this.spriteSize.Y);
                 this.current = new TippyFrame(this.size, this.uv0, this.uv1, frame.Sound);
+                TippyPlugin.TippyController.PlaySound(this.current.sound);
                 return this.current;
             }
 
@@ -277,6 +334,9 @@ public class TippyController
             this.uv0 = this.ToSpriteSheetScale(this.coords);
             this.uv1 = this.ToSpriteSheetScale(this.coords + this.spriteSize);
             this.current = new TippyFrame(this.size, this.uv0, this.uv1, frame.Sound);
+
+            // play sound
+            TippyPlugin.TippyController.PlaySound(this.current.sound);
 
             // return animation
             return this.current;
